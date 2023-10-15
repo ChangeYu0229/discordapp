@@ -1,6 +1,12 @@
 {
-    "version": 2,
-    "routes": [
-      {"src": "/(.*)","dest": "https://discord.com"}
-    ]
+    "rewrites": [
+        { "source": "/", "destination": "https://discord.com" },
+        {
+            "source": "/:match*",
+            "destination": "https://discord.com/:match*"
+        }
+    ],
+    "github": {
+        "silent": true
+    }
 }
